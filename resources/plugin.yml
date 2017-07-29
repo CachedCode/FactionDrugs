@@ -1,0 +1,5 @@
+name: FactionDrugs
+description: A drug plugin for Factions/RPG servers.
+main: net.kryptonox.factiondrugs.FactionDrugs
+version: 1.0.0
+author: InfiniteLoophole [CreeperAnatomy]

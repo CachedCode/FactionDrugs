@@ -1,5 +1,11 @@
 package net.kryptonox.factiondrugs;
 
-public class FactionDrugs {
+import org.bukkit.plugin.java.JavaPlugin;
+
+public class FactionDrugs extends JavaPlugin {
+	
+	public void onEnable() {
+		
+	}
 
 }
