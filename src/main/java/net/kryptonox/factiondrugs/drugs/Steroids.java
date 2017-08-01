@@ -16,6 +16,7 @@ import net.kryptonox.factiondrugs.FactionDrugs;
 public class Steroids extends Drug {
 	
 	static int task;
+	int pure = purity.nextInt(100) + 1;
 	
 	public Steroids(FactionDrugs plugin, String name) {
 		super(plugin, name);
@@ -30,7 +31,7 @@ public class Steroids extends Drug {
 		ItemMeta steroidsMeta = steroids.getItemMeta();
 	
 		steroidsMeta.setDisplayName(ChatColor.translateAlternateColorCodes('&', name));
-		lore.add(ChatColor.translateAlternateColorCodes('&', "&797% Pure"));
+		lore.add(ChatColor.translateAlternateColorCodes('&', "&7" + pure + " Pure"));
 		lore.add(ChatColor.translateAlternateColorCodes('&', "&7Right Click To Swallow!"));
 		steroidsMeta.setLore(lore);
 		lore.clear();

@@ -2,8 +2,7 @@ package net.kryptonox.factiondrugs.drugs;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import org.bukkit.entity.Player;
+import java.util.Random;
 
 import net.kryptonox.factiondrugs.FactionDrugs;
 
@@ -15,6 +14,8 @@ public abstract class Drug {
 		
 		createRecipe(name);
 	}
+	
+	Random purity = new Random();
 	
 	public List<String> lore = new ArrayList<String>();
 	
