@@ -30,7 +30,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.8.8-R0.1-SNAPSHOT</version>
+            <version>1.12-R0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -58,33 +58,6 @@
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-shade-plugin</artifactId>
-                <version>2.4.3</version>
-                <configuration>
-                    <!--  utterly useless artifact from shade 2.x  -->
-                    <createDependencyReducedPom>false</createDependencyReducedPom>
-                </configuration>
-                <executions>
-                    <execution>
-                        <phase>package</phase>
-                        <goals>
-                            <goal>shade</goal>
-                        </goals>
-
-                        <configuration>
-                            <relocations>
-                                <!-- relocated due to dependency hell between Spigot and JDA -->
-                                <relocation>
-                                    <pattern>org.apache.commons</pattern>
-                                    <shadedPattern>com.crevianstudios.sheinicke.MCDiscord.commons</shadedPattern>
-                                </relocation>
-                            </relocations>
-                        </configuration>
-                    </execution>
-                </executions>
             </plugin>
         </plugins>
     </build>

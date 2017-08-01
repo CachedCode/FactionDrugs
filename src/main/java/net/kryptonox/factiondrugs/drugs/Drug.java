@@ -3,11 +3,13 @@ package net.kryptonox.factiondrugs.drugs;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.bukkit.entity.Player;
+
 import net.kryptonox.factiondrugs.FactionDrugs;
 
 public abstract class Drug {
 	
-	FactionDrugs plugin;
+	static FactionDrugs plugin;
 	public Drug(FactionDrugs plugin, String name) {
 		this.plugin = plugin;
 		
