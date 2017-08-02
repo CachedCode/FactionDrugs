@@ -1,5 +1,6 @@
 package net.kryptonox.factiondrugs.event;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -10,8 +11,8 @@ import org.bukkit.inventory.ItemStack;
 
 import net.kryptonox.factiondrugs.FactionDrugs;
 import net.kryptonox.factiondrugs.drugs.Cocaine;
+import net.kryptonox.factiondrugs.drugs.Heroin;
 import net.kryptonox.factiondrugs.drugs.Steroids;
-import net.md_5.bungee.api.ChatColor;
 
 public class DrugUseEvent implements Listener {
 	
@@ -37,11 +38,18 @@ public class DrugUseEvent implements Listener {
 			}
 			
 			if(itemInHand.getType().equals(Material.GHAST_TEAR) && (itemInHand.getItemMeta().hasDisplayName() &&
-					   itemInHand.getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&8Steroids")))) {
-						//Player, Peak (High), Low (Come Down)
-						itemInHand.setAmount(itemInHand.getAmount() - 1);
-						Steroids.giveEffects(p, 35, 20);
-					}
+			   itemInHand.getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&8Steroids")))) {
+	     	   //Player, Peak (High), Low (Come Down)
+			   itemInHand.setAmount(itemInHand.getAmount() - 1);
+		 	   Steroids.giveEffects(p, 35, 20);
+			}
+			
+			if(itemInHand.getType().equals(Material.RABBIT_STEW) && (itemInHand.getItemMeta().hasDisplayName() &&
+			   itemInHand.getItemMeta().getDisplayName().equals(ChatColor.translateAlternateColorCodes('&', "&2Heroin")))) {
+			   //Player, Peak (High), Low (Come Down)
+			   itemInHand.setAmount(itemInHand.getAmount() - 1);
+			   Heroin.giveEffects(p, 40, 35);
+			}
 		}
 	}
 
